@@ -1,0 +1,8 @@
+<h1>Lists#create</h1>
+<p>Find me in app/views/lists/create.html.erb</p>
+<%= form_with model: @list do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit %>
+<% end %>

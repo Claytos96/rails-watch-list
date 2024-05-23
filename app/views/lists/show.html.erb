@@ -1,0 +1,17 @@
+<h2><%= @list.name %></h2>
+
+<%= link_to "Delete",
+  list_path(@list),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+
+<li><%= link_to 'new bookmark', new_bookmark_path(@list) %></li>
+
+<ul>
+  <% @bookmarks.each do |bookmark| %>
+    <li><%= bookmark.movie.title %></li>
+    <li><%= bookmark.comment %></li>
+    <li><%= link_to "Delete", "/bookmarks/#{bookmark.id}", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%></li>
+    ..............
+  <% end %>
+</ul>
