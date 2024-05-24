@@ -10,6 +10,7 @@
 <ul>
   <% @bookmarks.each do |bookmark| %>
     <li><%= bookmark.movie.title %></li>
+    <img src="<%= bookmark.movie.poster_url %>">
     <li><%= bookmark.comment %></li>
     <li><%= link_to "Delete", "/bookmarks/#{bookmark.id}", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%></li>
     ..............
