@@ -10,7 +10,7 @@
 <ul>
   <% @bookmarks.each do |bookmark| %>
     <li><%= bookmark.movie.title %></li>
-    <%= cl_image_tag("iaonvf5f3pb9p0tw3g8q",
+    <%= cl_image_tag(bookmark.photo.key,
       width: 400, height: 300, crop: :fill) %>
     <li><%= bookmark.comment %></li>
     <li><%= link_to "Delete", "/bookmarks/#{bookmark.id}", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%></li>

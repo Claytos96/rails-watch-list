@@ -5,4 +5,5 @@ class Bookmark < ApplicationRecord
   belongs_to :movie
   belongs_to :list
   validates :list, uniqueness: { scope: :movie, message: "Unique movie in the list" }
+  has_one_attached :photo
 end
